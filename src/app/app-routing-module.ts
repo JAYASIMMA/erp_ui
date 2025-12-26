@@ -6,7 +6,10 @@ const routes: Routes = [
   { path: 'teacher', loadChildren: () => import('./modules/teacher/teacher-module').then(m => m.TeacherModule) },
   { path: 'admin', loadChildren: () => import('./modules/admin/admin-module').then(m => m.AdminModule) },
   { path: 'auth', loadChildren: () => import('./modules/auth/auth-module').then(m => m.AuthModule) },
-  { path: '', redirectTo: 'auth/login', pathMatch: 'full' }
+  { path: 'transport', loadChildren: () => import('./modules/transport/transport-module').then(m => m.TransportModule) },
+  { path: 'workers', loadChildren: () => import('./modules/workers/workers-module').then(m => m.WorkersModule) },
+  { path: 'staff', loadChildren: () => import('./modules/staff/staff-module').then(m => m.StaffModule) },
+  { path: '', loadChildren: () => import('./modules/home/home-module').then(m => m.HomeModule) }
 ];
 
 @NgModule({
